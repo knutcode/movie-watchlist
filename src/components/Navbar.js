@@ -3,7 +3,7 @@ import { NavLink, Outlet, Route, Routes } from 'react-router-dom';
 const Navbar = () => {
 	return (
 		<>
-			<nav className="flex shrink-0 px-12 bg-black bg-[center_-9.8rem] bg-cover h-48 justify-between items-center">
+			<nav className="max-[450px]:flex-col max-[450px]:justify-center md:justify-center md:gap-72 flex shrink-0 px-12 bg-[center_-9.8rem] sm:bg-[center_-16rem] bg-cover h-48 justify-between items-center">
 				<Routes>
 					<Route
 						path="/"

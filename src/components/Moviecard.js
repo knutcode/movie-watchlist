@@ -14,30 +14,36 @@ const Moviecard = (props) => {
 	}, [imdbID]);
 
 	return (
-		<div key={imdbID}>
-			<>
-				<div>
-					<img
-						src={movieInfo.Poster !== 'N/A' ? movieInfo.Poster : 'https://via.placeholder.com/400'}
-						alt={movieInfo.Title}
-					/>
-				</div>
-				<div>
-					<h2>{movieInfo.Title}</h2>
-					<p>{movieInfo.imdbRating}</p>
+		<div
+			key={imdbID}
+			className="flex gap-4 py-4 justify-center"
+		>
+			<div className="w-24 shrink-0 grow-0">
+				<img
+					src={movieInfo.Poster !== 'N/A' ? movieInfo.Poster : 'https://via.placeholder.com/400x650'}
+					alt={movieInfo.Title}
+					className="w-24"
+				/>
+			</div>
+			<div className="flex flex-col gap-2 justify-center">
+				<div className="flex gap-2 items-center">
+					<h2 className="text-lg font-medium leading-5 truncate max-w-[20rem]">{movieInfo.Title}</h2>
+					<p className="text-xs">{movieInfo.imdbRating}</p>
 				</div>
 
-				<div>
-					<p>{movieInfo.Runtime}</p>
+				<div className="flex gap-6 text-xs">
+					{movieInfo.Runtime !== 'N/A' ? <p>{movieInfo.Runtime}</p> : null}
 					<p>{movieInfo.Genre}</p>
-					<button>+</button>
-					<p>Watchlist</p>
+					<div className="flex">
+						<button>+</button>
+						<p>Watchlist</p>
+					</div>
 				</div>
 
-				<div>
-					<span>{movieInfo.Plot}</span>
+				<div className="flex text-neutral-500 text-sm max-w-[25rem]">
+					<p className="line-clamp-3">{movieInfo.Plot}</p>
 				</div>
-			</>
+			</div>
 		</div>
 	);
 };

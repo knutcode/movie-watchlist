@@ -28,10 +28,11 @@ function Home() {
 
 	return (
 		<div className="px-12 flex-1 flex flex-col border-2 border-slate-500">
-			<div className="flex">
+			<div className="flex mb-6 justify-center">
 				<input
 					type="text"
-					className="-mt-5 z-10 grow rounded-md px-6 py-2 border-slate-300 border-2 outline-none"
+					size="1"
+					className="-mt-5 z-10 grow shrink rounded-md px-6 py-2 border-slate-300 border-2 outline-none max-w-[512px]"
 					placeholder="Search for a movie"
 					value={searchValue}
 					onChange={onUserInput}
@@ -48,7 +49,7 @@ function Home() {
 				</>
 			) : searchValue.trim().length !== 0 ? (
 				<div className="flex justify-center items-center font-bold text-lg text-neutral-400/50 flex-1 border-2 border-slate-500">
-					<h2>No matching results.</h2>
+					<h2 className="w-80 text-center">Unable to find what you’re looking for. Please try another search.</h2>
 				</div>
 			) : (
 				<div className="flex justify-center items-center font-bold text-lg text-neutral-400/50 flex-1 border-2 border-slate-500">
