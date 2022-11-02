@@ -2,12 +2,13 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { API_URL } from './App';
+import { API_URL } from '../pages/Home';
 
-const MovieCard = (props) => {
+const Moviecard = (props) => {
 	const [movieInfo, setMovieInfo] = useState('');
 	const { imdbID } = props.movie;
 
+	// Uses IMDb ID prop from App as an argument to fetch detailed API info each time an IMDb ID is fetched (10 times)
 	useEffect(() => {
 		axios.get(`${API_URL}&i=${imdbID}`).then((res) => setMovieInfo(res.data));
 	}, [imdbID]);
@@ -29,6 +30,7 @@ const MovieCard = (props) => {
 				<div>
 					<p>{movieInfo.Runtime}</p>
 					<p>{movieInfo.Genre}</p>
+					<button>+</button>
 					<p>Watchlist</p>
 				</div>
 
@@ -40,4 +42,4 @@ const MovieCard = (props) => {
 	);
 };
 
-export default MovieCard;
+export default Moviecard;
