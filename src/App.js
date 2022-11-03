@@ -7,17 +7,17 @@ import Watchlist from './pages/Watchlist';
 function App() {
 	return (
 		<div className="flex flex-col items-stretch h-screen">
+			{<Navbar />}
 			<Routes>
-				<Route element={<Navbar />}>
-					<Route
-						path="/"
-						element={<Home />}
-					/>
-					<Route
-						path="/watchlist"
-						element={<Watchlist />}
-					/>
-				</Route>
+				<Route
+					exact
+					path="/"
+					element={<Home />}
+				/>
+				<Route
+					path="/watchlist"
+					element={<Watchlist />}
+				/>
 			</Routes>
 		</div>
 	);
