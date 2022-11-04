@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/movie-watchlist/static/css/main.5bdfb86c.css",
-    "main.js": "/movie-watchlist/static/js/main.8cfea854.js",
+    "main.js": "/movie-watchlist/static/js/main.3882af18.js",
     "static/media/andre-tan-THJJRUhNlEc-unsplash.jpg": "/movie-watchlist/static/media/andre-tan-THJJRUhNlEc-unsplash.99470a650506fdd13ad9.jpg",
     "index.html": "/movie-watchlist/index.html",
     "main.5bdfb86c.css.map": "/movie-watchlist/static/css/main.5bdfb86c.css.map",
-    "main.8cfea854.js.map": "/movie-watchlist/static/js/main.8cfea854.js.map"
+    "main.3882af18.js.map": "/movie-watchlist/static/js/main.3882af18.js.map"
   },
   "entrypoints": [
     "static/css/main.5bdfb86c.css",
-    "static/js/main.8cfea854.js"
+    "static/js/main.3882af18.js"
   ]
 }
